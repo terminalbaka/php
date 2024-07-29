@@ -1,0 +1,21 @@
+{
+    "name": "Dev container trait",
+    "dockerComposeFile": [
+        "../compose.yml"
+    ],
+    "remoteUser": "user-trait",
+    "workspaceFolder": "/app",
+    "service": "app",
+    "shutdownAction": "stopCompose",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "DEVSENSE.phptools-vscode",
+                "xdebug.php-debug",
+                "bmewburn.vscode-intelephense-client",
+                "xdebug.php-pack",
+                "zobo.php-intellisense"
+            ]
+        }
+    }
+}

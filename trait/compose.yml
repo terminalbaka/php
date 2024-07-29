@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        UID: 1000
+        GID: 1000
+        TAG_iMAGE: 8.2.20-fpm-alpine3.20
+    volumes:
+      - .:/app
+    ports:
+      - 9000:9000
+
+networks:
+  default:
+    name: terminalbaka-trait
+    driver: bridge
